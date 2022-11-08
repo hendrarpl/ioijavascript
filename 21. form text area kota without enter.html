@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nama kota: <input type="text" id="ketik"></p>
+    <p><button id="tambahKota">tambah kota</button></p>
+    <p><textarea name="" id="daftarKota" cols="30" rows="10"></textarea></p>
+</body>
+<script>
+    const ketik = document.getElementById("ketik");
+    const tambah = document.getElementById("tambahKota");
+    const textArea = document.getElementById("daftarKota");
+
+    const proses = () => {
+        let namaKotaBaru = ketik.value + "\n";
+        let daftarKotaSekarang = textArea.value;
+        textArea.value = namaKotaBaru + daftarKotaSekarang;
+        ketik.value = "";
+        ketik.focus();
+        
+
+    }
+
+    tambah.addEventListener("keypress", proses);
+</script>
+</html>

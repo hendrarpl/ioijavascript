@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="proses.php" id="formKu" method="get" target="_self">
+        <p>Username : <input type="text" name="username" id="username"></p>
+
+        <p><input type="checkbox" name="js" id="js" value="belajar javascript">Belajar javascript</p>
+
+        <p><input type="submit" value="Kirim Data" id="submit"></p>
+    </form>
+</body>
+<script>
+    const form = document.getElementById('formKu');
+    const username = document.getElementById('username');
+    const checkbox = document.getElementById('js');
+    const submit = document.getElementById('submit');
+
+    // console.log(form);
+    // console.log(username);
+    // console.log(checkbox);
+    // console.log(submit);
+
+    console.log(form.elements);
+    console.log(form.length);
+    console.log(form.name);
+    console.log(form.method);
+    console.log(form.target);
+    console.log(form.action);
+
+    
+</script>
+</html>

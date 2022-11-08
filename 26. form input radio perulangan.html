@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Belajar: 
+        <input type="radio" id="belajarHTML" value="HTML">HTML
+        <input type="radio" id="belajarCSS" value="CSS">CSS
+        <input type="radio" id="belajarJavascript" value="Javascript">Javascript
+    </p>
+    <p><Button id="periksa">Periksa</Button></p>
+    <p><span id="hasil"></span></p>
+</body>
+<script>
+    const input = document.querySelectorAll("input");
+    const cHTML = document.getElementById("belajarHTML");
+    const cCSS = document.getElementById("belajarCSS");
+    const cJavascript = document.getElementById("belajarJavascript");
+    const btn = document.getElementById("periksa");
+    const hasil = document.getElementById("hasil");
+
+    const proses = () => {
+        for(var i = 0; i < input.length; i++){
+            if(input[i].checked){
+                hasil.innerHTML += input[i].value;
+            }
+        }
+    }
+
+    btn.addEventListener("click", proses);
+</script>
+</html>

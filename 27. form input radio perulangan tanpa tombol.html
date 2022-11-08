@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="klik">Belajar: 
+        <input type="radio" id="belajarHTML" value="HTML" name="belajar">HTML
+        <input type="radio" id="belajarCSS" value="CSS" name="belajar">CSS
+        <input type="radio" id="belajarJavascript" value="Javascript" name="belajar">Javascript
+        <input type="radio" id="belajarPHP" value="PHP" name="belajar" >PHP
+    </p>
+    <button id="uncheck">uncek</button>
+    <p><span id="hasil"></span></p>
+</body>
+<script>
+    const input = document.querySelectorAll("input");
+    const periksa = document.querySelector("p");
+    const hasil = document.getElementById("hasil");
+    const paragraf = document.getElementById("klik");
+    const btn = document.getElementById("uncheck");
+
+    const proses = () => {
+        hasil.innerHTML = "";
+
+        // var jumlah = input.length;
+
+        for(var i = 0; i < input.length; i++){
+            if(input[i].checked === true){
+                hasil.innerHTML += `${input[i].value} `;
+            }
+        }
+    }
+
+    const uncek = () => {
+        for(var i = 0; i< input.length; i++){
+            input[i].checked = false;
+        }
+
+    }
+
+    klik.addEventListener("click", proses);
+    btn.addEventListener("click", uncek)
+    btn.addEventListener("click", proses)
+
+</script>
+</html>

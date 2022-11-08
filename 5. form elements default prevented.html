@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="proses.php" id="formKu" method="get" target="_self">
+        <p>Username : <input type="text" name="username" id="username"></p>
+        <p><input type="submit" value="submit" id="submit">
+        <input type="reset" value="reset" id="reset"></p>
+    </form>
+</body>
+<script>
+    const diStop = (e) => {
+        console.log(e.type);
+        e.preventDefault();
+        console.log(e.defaultPrevented);
+    };
+
+    const formNode = document.getElementById('formKu');
+
+    formNode.addEventListener('submit', diStop);
+    formNode.addEventListener('reset', diStop);
+</script>
+
+</html>

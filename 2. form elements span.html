@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="proses.php" id="formKu" method="get" target="_self">
+        <p>Username : <input type="text" name="username" id="username"></p>
+        <p> <span id="spanSubmit">Submit</span>
+            <span id="spanReset"> Reset Form</span></p>
+    </form>
+</body>
+<script>
+    const formKu = document.getElementById('formKu');
+    const spanSubmit = document.getElementById('spanSubmit');
+    const spanReset = document.getElementById('spanReset');
+
+    const funcSubmit = () => {
+        formKu.submit()
+    };
+    const funcReset = () => {
+        formKu.reset()
+    };
+
+    spanSubmit.addEventListener('click', funcSubmit);
+    spanReset.addEventListener('click', funcReset);
+</script>
+
+</html>

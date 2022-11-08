@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #hasil {width: 300px; height: 50px; border: 2px solid black;}
+</style>
+<body>
+    <p>Ketik disini: <input type="text" id="ketik"></p>
+    <div id="hasil"></div>
+</body>
+<script>
+    const ketik = document.getElementById("ketik");
+    const hasil = document.getElementById("hasil");
+
+    const diKeyDown = () => {
+        hasil.style.backgroundColor = "red";
+    };
+    const diKeyPress = () => {
+        hasil.style.backgroundColor = "blue";
+    };
+    const diKeyUp = () => {
+        hasil.style.backgroundColor = "yellow";
+    };
+
+    ketik.addEventListener("keydown", diKeyDown);
+    ketik.addEventListener("keypress", diKeyPress);
+    ketik.addEventListener("keyup", diKeyUp);
+</script>
+</html>

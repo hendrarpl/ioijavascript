@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Belajar: 
+    <select name="belajar" id="belajar">
+        <option value="HTML" id="belajarHTML">HTML</option>
+        <option value="CSS" id="belajarCSS">CSS</option>
+        <option value="Javascript" id="belajarJavascript">Javascript</option>
+    </select>
+    </p>
+    <p><button id="periksa">periksa</button></p>
+</body>
+<script>
+    const periksa = document.getElementById("periksa");
+    const belajarCSSnode = document.getElementById("belajarCSS");
+
+    const cek = () => {
+        console.log(belajarCSSnode);
+
+        console.log(belajarCSSnode.value);
+        console.log(belajarCSSnode.index);    
+        console.log(belajarCSSnode.text);    
+        console.log(belajarCSSnode.selected);    
+        console.log(belajarCSSnode.defaultSelected);    
+        console.log(belajarCSSnode.disabled);    
+    }
+
+    periksa.addEventListener("click", cek)
+</script>
+</html>

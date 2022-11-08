@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="tombol1">tombol1</button>
+    <button id="tombol2">tombol2</button>
+</body>
+<script>
+    document.getElementById("tombol1");
+    document.getElementById("tombol2");
+
+    const pesan = (e) => alert(e.target.id);
+    const tampilkanPesanJuga = (e) => tombol1.click();
+    
+    tombol1.addEventListener("click", pesan);
+    tombol2.addEventListener("click", tampilkanPesanJuga);
+</script>
+</html>

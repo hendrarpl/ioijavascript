@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ketik disini: <input type="text" id="ketik"></p>
+    <p>Hasil ketik a: <span id="hasilKetikA"></span></p>
+    <p>Hasil ketik b: <span id="hasilKetikB"></span></p>
+</body>
+<script>
+    const ketik = document.getElementById("ketik");
+    const hasilKetikA = document.getElementById("hasilKetikA");
+    const hasilKetikB = document.getElementById("hasilKetikB");
+    let a = 0;
+    let b = 0;
+
+    const keyPressEvent = (e) => {
+        if (e.key == "a" || e.key =="A"){
+            a++;
+            hasilKetikA.innerHTML = a;
+        }
+        if(e.key == "b"){
+            b++;
+            hasilKetikB.innerHTML = b;
+        }
+    }
+    ketik.addEventListener("keypress", keyPressEvent);
+</script>
+</html>

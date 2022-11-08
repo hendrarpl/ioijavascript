@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Masukkan text: <textarea name="" id="ketik">Belajar javascript</textarea></p>
+    <p>Hasil : <span id="hasil"></span></p>
+</body>
+<script>
+    const text = document.getElementById("ketik");
+    const hasil = document.getElementById("hasil");
+
+    const proses = () => {
+        hasil.innerText = text.value;
+    }
+
+    text.addEventListener("keyup", proses);
+</script>
+</html>
